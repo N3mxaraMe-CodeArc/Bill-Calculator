@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Small Input Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .outer-wrapper-left {
+        margin: 1px solid red;
+        height: 100vh;
+        background-color: rgb(255, 255, 188);
+      }
+      .outer-wrapper-right {
+        height: 100vh;
+        background-color: rgb(255, 234, 253);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 outer-wrapper-left">
+          <h2 class="header-left text-center">Ground Floor</h2>
+          <hr />
+          <div class="d-flex ground-outer">
+            <div class="electricity-bill container">
+              <h4 class="">Electricity Bill</h4>
+              <div class="form-floating col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="input1"
+                  placeholder="Enter the Electricity bill"
+                />
+                <label class="floatingTextarea" for=""
+                  >Enter the Electricity Bill</label
+                >
+              </div>
+            </div>
+            <div class="water-bill container">
+              <h4 class="">Water Bill</h4>
+              <div class="form-floating col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="input2"
+                  placeholder="Enter water Bill"
+                />
+                <label class="floatingTextarea" for=""
+                  >Enter the Water Bill</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <h4 class="mt-4">Room Number</h4>
+            <div class="form-floating">
+              <select
+                required
+                class="form-select"
+                id="floatingSelect"
+                aria-label="Floating label select example"
+              >
+                <option selected disabled>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+              <label for="floatingSelect">Enter the Room Number</label>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mt-4">
+            <button class="btn btn-success">Calculate</button>
+          </div>
+
+          <div class="container">
+            <h5>
+              Electricity bill for One Person : <span id="price">00</span>
+            </h5>
+            <h5>Water bill for One Person : <span id="pricewater">00</span></h5>
+            <h5>Total Payble price : <span id="pricetotal">00</span></h5>
+          </div>
+        </div>
+        <div class="col-6 outer-wrapper-right">
+          <h2 class="header-left text-center">1st Floor</h2>
+          <hr />
+          <div class="d-flex ground-outer">
+            <div class="electricity-bill container">
+              <h4 class="">Electricity Bill</h4>
+              <div class="form-floating col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="elebillfirst"
+                  placeholder="Enter the Electricity bill"
+                />
+                <label class="floatingTextarea" for=""
+                  >Enter the Electricity Bill</label
+                >
+              </div>
+            </div>
+            <div class="water-bill container">
+              <h4 class="">Water Bill</h4>
+              <div class="form-floating col-12">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="waterbillfirst"
+                  placeholder="Enter water Bill"
+                />
+                <label class="floatingTextarea" for=""
+                  >Enter the Water Bill</label
+                >
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="container">
+            <h4 class="mt-2 mb-2">Participants in rooms</h4>
+            <div class="row">
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="room1"
+                  placeholder="Participants in Room No.1"
+                />
+                <label class="floatingTextarea ms-2" for="room1"
+                  >Room No.1</label
+                >
+              </div>
+
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="room2"
+                  placeholder="Participants in Room No.1"
+                />
+                <label class="floatingTextarea ms-2" for="">Room No.2</label>
+              </div>
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="room3"
+                  placeholder="Participants in Room No.1"
+                />
+                <label class="floatingTextarea ms-2" for="">Room No.3</label>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-2">
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="room4"
+                  placeholder="Participants in Room No.1"
+                />
+                <label class="floatingTextarea ms-2" for="">Room No.4</label>
+              </div>
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="room5"
+                  placeholder="Participants in Room No.1"
+                />
+                <label class="floatingTextarea ms-2" for="">Room No.5</label>
+              </div>
+              <div class="form-floating col-4">
+                <input
+                  type="text"
+                  class="form-control form-control-sm"
+                  id="total"
+                  placeholder="total"
+                />
+                <label class="floatingTextarea ms-2" for="">Total</label>
+              </div>
+              <div class="container">
+                <h4 class="mt-4 mb-3">Room Number</h4>
+                <div class="form-floating">
+                  <select
+                    required
+                    class="form-select mb-2"
+                    id="floatingSelectfirst"
+                    aria-label="Floating label select example"
+                  >
+                    <option selected disabled>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                  </select>
+                  <label for="floatingSelectfirst">Enter the Room Number</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end mt-">
+            <button class="btn btn-success btn2">Calculate</button>
+          </div>
+
+          <div class="container">
+            <h5>
+              Electricity bill for One Person : <span id="pricefirst">00</span>
+            </h5>
+            <h5>Water bill for One Person : <span id="pricewaterfirst">00</span></h5>
+            <h5>Total Payble price : <span id="pricetotalfirst">00</span></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    //ground floor section Start
+    function calculateBill() {
+      const elebill = parseFloat(document.getElementById("input1").value);
+      const billwater = parseFloat(document.getElementById("input2").value);
+      const totalprice = document.getElementById("pricetotal");
+      const electricitybill = elebill / 4;
+      const price = document.getElementById("price");
+      const pricewater = document.getElementById("pricewater");
+      pricewater.innerText = billwater / 11;
+
+      const roomnum = parseInt(
+        document.getElementById("floatingSelect").value,
+        10
+      );
+
+      switch (roomnum) {
+        case 1:
+          price.innerText = electricitybill / 4;
+
+          break;
+        case 2:
+          price.innerText = (2 * electricitybill) / 5;
+
+          break;
+        case 3:
+          price.innerText = electricitybill / 2;
+
+          break;
+        default:
+          price.innerText = "00";
+      }
+
+      totalprice.innerText =
+        parseFloat(price.innerText) + parseFloat(pricewater.innerText);
+    }
+    document
+      .querySelector("button.btn-success")
+      .addEventListener("click", calculateBill);
+
+    //ground floor section end
+
+    //1st floor section start
+
+    const firstbill = () => {
+      const firstwaterbill = parseFloat(
+        document.getElementById("waterbillfirst").value
+      );
+      const firstelebill = parseFloat(
+        document.getElementById("elebillfirst").value
+      );
+
+      const ParticipantRoom1 = document.getElementById("room1").value;
+      const ParticipantRoom2 = document.getElementById("room2").value;
+      const ParticipantRoom3 = document.getElementById("room3").value;
+      const ParticipantRoom4 = document.getElementById("room4").value;
+      const ParticipantRoom5 = document.getElementById("room5").value;
+      const total = document.getElementById("total").value;
+      const pricewaterfirst = document.getElementById("pricewaterfirst");
+      const pricetotalfirst = document.getElementById("pricetotalfirst");
+
+      pricewaterfirst.innerText = firstwaterbill / total;
+
+
+      const roomnumfirst = parseInt(
+        document.getElementById("floatingSelectfirst").value,
+        10
+      );
+
+      const roomElebillfirst = firstelebill / 5;
+
+      switch (roomnumfirst) {
+        case 1:
+          pricefirst.innerText = roomElebillfirst / ParticipantRoom1;
+          break;
+        case 2:
+          pricefirst.innerText = roomElebillfirst / ParticipantRoom2;
+          break;
+        case 3:
+          pricefirst.innerText = roomElebillfirst / ParticipantRoom3;
+          break;
+        case 4:
+          pricefirst.innerText = roomElebillfirst / ParticipantRoom4;
+          break;
+        case 5:
+          pricefirst.innerText = roomElebillfirst / ParticipantRoom5;
+          break;
+        default:
+          pricefirst.innerText = "00";
+      }
+
+      pricetotalfirst.innerText =
+      parseFloat(pricefirst.innerText) +
+      parseFloat(pricewaterfirst.innerText);
+
+    };
+    document
+      .querySelector("button.btn-success.btn2")
+      .addEventListener("click", firstbill);
+
+
+    // 1st Floor ended
+  </script>
+</html>
